@@ -1,5 +1,6 @@
-baseURL = "https://ethwei.com"
+baseURL = "https://ethwei-com.pages.dev/"
 defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 disableKinds = ["taxonomy", "term"]
 
 [params]

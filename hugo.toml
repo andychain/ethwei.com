@@ -1,0 +1,38 @@
+baseURL = "https://ethwei.com"
+defaultContentLanguage = "en"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Ethereum unit converter. Wei, Gwei, Ether — instant, precise."
+
+[languages]
+  [languages.en]
+    languageName = "EN"
+    languageCode = "en"
+    title = "ethwei"
+    weight = 1
+  [languages.zh]
+    languageName = "中文"
+    languageCode = "zh"
+    title = "ethwei"
+    weight = 2
+  [languages.es]
+    languageName = "ES"
+    languageCode = "es"
+    title = "ethwei"
+    weight = 3
+  [languages.ja]
+    languageName = "JA"
+    languageCode = "ja"
+    title = "ethwei"
+    weight = 4
+  [languages.fr]
+    languageName = "FR"
+    languageCode = "fr"
+    title = "ethwei"
+    weight = 5
+  [languages.ko]
+    languageName = "한국어"
+    languageCode = "ko"
+    title = "ethwei"
+    weight = 6

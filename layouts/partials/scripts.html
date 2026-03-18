@@ -1,0 +1,59 @@
+<script>
+
+// Apply saved theme
+(function(){
+  var t = localStorage.getItem('ethwei-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+
+// Hamburger - use timeout to avoid immediate close from document click
+document.getElementById('hamburger').addEventListener('click', function(e){
+  e.stopPropagation();
+  var m = document.getElementById('mobileMenu');
+  var h = document.getElementById('hamburger');
+  var open = h.classList.toggle('open');
+  m.style.display = open ? 'block' : 'none';
+});
+
+// Close lang dropdown on outside click (not hamburger)
+document.addEventListener('click', function(e){
+  var d = document.getElementById('langDropdown');
+  var s = document.getElementById('langSwitcher');
+  if(d) d.style.display = 'none';
+  if(s) s.classList.remove('open');
+});
+
+// Keyboard shortcut
+document.addEventListener('keydown', function(e){
+  if((e.metaKey||e.ctrlKey) && e.key==='k'){
+    e.preventDefault();
+    var m = document.getElementById('searchModal');
+    m.style.display = m.style.display==='flex' ? 'none' : 'flex';
+    if(m.style.display==='flex') document.getElementById('searchInput').focus();
+  }
+  if(e.key==='Escape') document.getElementById('searchModal').style.display='none';
+});
+
+// Pagefind search
+async function ethweiSearch(q) {
+  var results = document.getElementById('searchResults');
+  if (!q.trim()) {
+    results.innerHTML = '<p class="search-hint">Type to search units, conversions, and more.</p>';
+    return;
+  }
+  try {
+    if (!window.__pagefind__) {
+      window.__pagefind__ = await import('/pagefind/pagefind.js');
+      await window.__pagefind__.init();
+    }
+    var search = await window.__pagefind__.search(q);
+    var data = await Promise.all(search.results.slice(0,6).map(function(r){return r.data();}));
+    results.innerHTML = data.length
+      ? data.map(function(r){ return '<a class="search-result-item" href="'+r.url+'"><div class="result-title">'+(r.meta&&r.meta.title?r.meta.title:'Page')+'</div><div class="result-excerpt">'+r.excerpt+'</div></a>'; }).join('')
+      : '<p class="search-hint">No results found.</p>';
+  } catch(err) {
+    results.innerHTML = '<p class="search-hint">Search unavailable.</p>';
+  }
+}
+
+</script>

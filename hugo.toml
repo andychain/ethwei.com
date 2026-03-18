@@ -7,32 +7,26 @@ disableKinds = ["taxonomy", "term"]
 
 [languages]
   [languages.en]
-    languageName = "EN"
     languageCode = "en"
-    title = "ethwei"
+    title = "Ethwei"
     weight = 1
   [languages.zh]
-    languageName = "中文"
     languageCode = "zh"
-    title = "ethwei"
+    title = "以太维"
     weight = 2
   [languages.es]
-    languageName = "ES"
     languageCode = "es"
-    title = "ethwei"
+    title = "Ethwei"
     weight = 3
   [languages.ja]
-    languageName = "JA"
     languageCode = "ja"
-    title = "ethwei"
+    title = "イータイウェイ"
     weight = 4
   [languages.fr]
-    languageName = "FR"
     languageCode = "fr"
-    title = "ethwei"
+    title = "Ethwei"
     weight = 5
   [languages.ko]
-    languageName = "한국어"
     languageCode = "ko"
-    title = "ethwei"
+    title = "이타웨이"
     weight = 6

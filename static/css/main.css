@@ -11,8 +11,8 @@
   --text: #f0f0f0;
   --text-2: #888;
   --text-3: #555;
-  --accent: #6b7dff;
-  --accent-hover: #8490ff;
+  --accent: #00a86b;
+  --accent-hover: #00c27a;
   --logo-color: #f0f0f0;
 }
 
@@ -24,8 +24,8 @@
   --text: #111111;
   --text-2: #555;
   --text-3: #999;
-  --accent: #4a5af0;
-  --accent-hover: #3344e0;
+  --accent: #008f5a;
+  --accent-hover: #00a86b;
   --logo-color: #111111;
 }
 

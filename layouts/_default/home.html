@@ -1,27 +1,296 @@
 {{ define "main" }}
 
-<!-- Desktop hero (hidden on mobile via main.css) -->
-<div class="hero-desktop-block" style="position:relative;width:100%;height:480px;overflow:hidden;display:block;">
+<!-- ═══ HERO ═══ -->
+<div class="hero-desktop-block" style="position:relative;width:100%;height:560px;overflow:hidden;">
   <img src="/banner.png" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;" />
-  <div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;display:flex;align-items:center;padding-left:80px;padding-right:80px;box-sizing:border-box;">
-    <h1 style="font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:700;color:#ffffff;letter-spacing:-0.03em;line-height:1.15;max-width:560px;text-shadow:0 0 30px rgba(0,0,0,1),0 2px 20px rgba(0,0,0,0.9);margin:0;padding:0;">Ethwei brings the world onchain access to global assets and financial freedom</h1>
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.4) 55%,rgba(0,0,0,0.05) 100%);z-index:1;"></div>
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;display:flex;align-items:center;padding:0 80px;box-sizing:border-box;">
+    <div style="max-width:600px;">
+      <div class="hero-tag">Layer 1 Blockchain</div>
+      <h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;color:#ffffff;letter-spacing:-0.03em;line-height:1.08;margin:0 0 24px;">The Chain for<br><span style="color:#00a86b;">Financial Freedom</span></h1>
+      <p style="font-size:1.1rem;color:rgba(255,255,255,0.8);line-height:1.65;margin:0 0 36px;max-width:480px;">Ethwei is a Layer 1 blockchain built to bring every user real ownership of assets and access to global financial opportunity — on chain, without permission.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="#ecosystem" class="btn-primary">Explore Ecosystem</a>
+        <a href="#learn" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- Mobile hero (hidden on desktop via main.css) -->
+<!-- Mobile hero -->
 <div class="hero-mobile-block">
   <div style="overflow:hidden;height:280px;display:flex;align-items:center;justify-content:center;margin-bottom:-40px;">
     <img src="/banner.png" alt="" style="width:160%;margin-right:25%;object-fit:contain;" />
   </div>
-  <div style="padding:0 24px 40px;background:var(--bg);">
-    <h1 style="font-family:'Space Grotesk',sans-serif;font-size:1.9rem;font-weight:700;color:var(--text);letter-spacing:-0.03em;line-height:1.2;margin:0;">Ethwei brings the world onchain access to global assets and financial freedom</h1>
+  <div style="padding:28px 24px 40px;background:var(--bg);">
+    <div class="hero-tag">Layer 1 Blockchain</div>
+    <h1 style="font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:700;color:var(--text);letter-spacing:-0.03em;line-height:1.15;margin:12px 0 16px;">The Chain for<br><span style="color:#00a86b;">Financial Freedom</span></h1>
+    <p style="font-size:0.95rem;color:var(--text-2);line-height:1.65;margin:0 0 28px;">A Layer 1 blockchain built to bring real ownership and global financial opportunity to every user — on chain.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="#ecosystem" class="btn-primary">Explore</a>
+      <a href="#learn" class="btn-secondary">Learn More</a>
+    </div>
   </div>
 </div>
 
-<section id="converter" style="padding:80px 24px;">
-  <div style="max-width:1200px;margin:0 auto;text-align:center;color:var(--text-2);">
-    Converter coming soon.
+<!-- ═══ STATS ═══ -->
+<div class="stats-bar">
+  <div class="section-inner stats-inner">
+    <div class="stat-item">
+      <span class="stat-num">L1</span>
+      <span class="stat-label">Native Blockchain</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">Fast</span>
+      <span class="stat-label">Transaction Finality</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">Low</span>
+      <span class="stat-label">Gas Fees</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">Open</span>
+      <span class="stat-label">Permissionless</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ WHAT IS ETHWEI ═══ -->
+<section id="learn" class="section-block">
+  <div class="section-inner">
+    <div class="two-col">
+      <div>
+        <div class="section-label">WHAT IS ETHWEI</div>
+        <h2 class="section-title">A new foundation for the onchain economy</h2>
+        <p class="body-text">Ethwei is a Layer 1 blockchain designed from the ground up to give users real control over their financial lives. By combining fast finality, low fees, and a permissionless architecture, Ethwei makes it possible for anyone — anywhere — to hold, transfer, and grow assets without relying on banks or intermediaries.</p>
+        <p class="body-text">Built for developers, traders, and everyday users alike, Ethwei is the foundation for a new generation of decentralized applications that put people first.</p>
+        <a href="/about/" class="text-link">Read the vision →</a>
+      </div>
+      <div class="highlight-box">
+        <div class="highlight-item">
+          <div class="highlight-icon">🔗</div>
+          <div>
+            <div class="highlight-title">Layer 1 Architecture</div>
+            <div class="highlight-desc">Native chain with its own consensus, security, and settlement layer — no bridges required.</div>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">💎</div>
+          <div>
+            <div class="highlight-title">Real Asset Ownership</div>
+            <div class="highlight-desc">Your keys, your assets. Full sovereignty over everything you hold on chain.</div>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🌍</div>
+          <div>
+            <div class="highlight-title">Global Access</div>
+            <div class="highlight-desc">Open to everyone. No identity checks, no geographic restrictions, no permission needed.</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- ═══ PILLARS ═══ -->
+<section class="section-block" style="background:var(--bg-2);">
+  <div class="section-inner">
+    <div class="section-label">CORE PILLARS</div>
+    <h2 class="section-title">Built on three principles</h2>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-number">01</div>
+        <h3 class="pillar-title">Security</h3>
+        <p class="pillar-desc">A decentralized validator network ensures the chain is resilient, censorship-resistant, and always available. Your assets are protected by cryptography, not promises.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">02</div>
+        <h3 class="pillar-title">Accessibility</h3>
+        <p class="pillar-desc">Low fees and fast finality mean Ethwei is usable for real everyday transactions — not just for whales. Financial tools should work for everyone.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">03</div>
+        <h3 class="pillar-title">Freedom</h3>
+        <p class="pillar-desc">Permissionless by design. No gatekeepers, no KYC, no central authority. Build, transact, and hold assets on your own terms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ECOSYSTEM ═══ -->
+<section id="ecosystem" class="section-block">
+  <div class="section-inner">
+    <div class="section-label">ECOSYSTEM</div>
+    <h2 class="section-title">What you can do on Ethwei</h2>
+    <p class="section-subtitle">A full-stack blockchain ecosystem — from holding assets to building applications.</p>
+    <div class="ecosystem-grid">
+      <div class="eco-card">
+        <div class="eco-icon">🏦</div>
+        <h3>Hold & Transfer Assets</h3>
+        <p>Send and receive digital assets globally, instantly, with minimal fees and full self-custody.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">📈</div>
+        <h3>DeFi & Trading</h3>
+        <p>Access decentralized exchanges, lending protocols, and yield opportunities — no bank account needed.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">🏗️</div>
+        <h3>Build Applications</h3>
+        <p>Deploy smart contracts and decentralized applications on a fast, stable, and developer-friendly chain.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">🪙</div>
+        <h3>Token Issuance</h3>
+        <p>Issue your own tokens, NFTs, or on-chain assets with simple tooling and low deployment costs.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">🔐</div>
+        <h3>Staking & Validation</h3>
+        <p>Participate in securing the network and earn rewards by staking or running a validator node.</p>
+      </div>
+      <div class="eco-card">
+        <div class="eco-icon">🌐</div>
+        <h3>Cross-Chain Bridges</h3>
+        <p>Connect to other chains and move assets across the broader crypto ecosystem seamlessly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GET STARTED ═══ -->
+<section class="section-block" style="background:var(--bg-2);">
+  <div class="section-inner">
+    <div class="two-col" style="align-items:start;">
+      <div>
+        <div class="section-label">GET STARTED</div>
+        <h2 class="section-title">Join the Ethwei network</h2>
+        <p class="body-text">Whether you're a developer building the next great dApp, a trader looking for better markets, or simply someone who wants real control over their money — Ethwei is for you.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;">
+          <a href="#" class="btn-primary">Get a Wallet</a>
+          <a href="/about/" class="btn-secondary">Read Docs</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Get a wallet</div>
+            <div class="step-desc">Download a compatible wallet to store and manage your Ethwei assets.</div>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Acquire ETW</div>
+            <div class="step-desc">Get the native ETW token from an exchange or peer-to-peer.</div>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Explore the ecosystem</div>
+            <div class="step-desc">Use dApps, trade assets, stake, or start building on Ethwei.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER ═══ -->
+<section class="cta-banner">
+  <div class="section-inner" style="text-align:center;">
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:#fff;letter-spacing:-0.03em;margin-bottom:16px;">Your assets. Your chain. Your freedom.</h2>
+    <p style="color:rgba(255,255,255,0.75);font-size:1.05rem;margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto;">Start your journey on Ethwei — the Layer 1 blockchain built for the world.</p>
+    <a href="#" class="btn-primary" style="font-size:1.05rem;padding:16px 44px;">Get Started Today</a>
+  </div>
+</section>
+
+<style>
+/* ── Shared ── */
+.section-block { padding:80px 0; }
+.section-inner { max-width:1200px; margin:0 auto; padding:0 24px; }
+.section-label { font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:14px; }
+.section-title { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.9rem,3.5vw,2.8rem); font-weight:700; color:var(--text); letter-spacing:-0.03em; line-height:1.15; margin-bottom:16px; }
+.section-subtitle { font-size:1rem; color:var(--text-2); margin-bottom:48px; max-width:560px; line-height:1.65; }
+.body-text { font-size:0.95rem; color:var(--text-2); line-height:1.75; margin-bottom:16px; }
+.text-link { color:var(--accent); font-weight:600; font-size:0.95rem; text-decoration:none; }
+.text-link:hover { text-decoration:underline; }
+
+/* ── Buttons ── */
+.btn-primary { display:inline-block; background:var(--accent); color:#fff; font-family:'Space Grotesk',sans-serif; font-size:0.95rem; font-weight:600; padding:13px 28px; border-radius:10px; text-decoration:none; transition:background 0.2s,transform 0.15s; }
+.btn-primary:hover { background:var(--accent-hover); transform:translateY(-1px); }
+.btn-secondary { display:inline-block; background:transparent; color:var(--text); font-family:'Space Grotesk',sans-serif; font-size:0.95rem; font-weight:600; padding:12px 28px; border-radius:10px; text-decoration:none; border:1px solid var(--border); transition:border-color 0.15s,color 0.15s; }
+.btn-secondary:hover { border-color:var(--accent); color:var(--accent); }
+
+/* ── Hero tag ── */
+.hero-tag { display:inline-block; background:rgba(0,168,107,0.18); color:#00a86b; border:1px solid rgba(0,168,107,0.35); font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:5px 12px; border-radius:20px; margin-bottom:20px; }
+
+/* ── Stats bar ── */
+.stats-bar { background:var(--bg-2); border-bottom:1px solid var(--border); border-top:1px solid var(--border); }
+.stats-inner { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; }
+.stat-item { display:flex; flex-direction:column; align-items:center; padding:28px 48px; }
+.stat-num { font-family:'Space Grotesk',sans-serif; font-size:1.9rem; font-weight:700; color:var(--accent); line-height:1; }
+.stat-label { font-size:0.75rem; color:var(--text-3); text-transform:uppercase; letter-spacing:0.08em; margin-top:6px; }
+.stat-divider { width:1px; height:44px; background:var(--border); }
+
+/* ── Two-col layout ── */
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+
+/* ── Highlight box ── */
+.highlight-box { display:flex; flex-direction:column; gap:20px; }
+.highlight-item { display:flex; gap:16px; align-items:flex-start; padding:20px; background:var(--bg-2); border:1px solid var(--border); border-radius:12px; transition:border-color 0.15s; }
+.highlight-item:hover { border-color:var(--accent); }
+.highlight-icon { font-size:1.6rem; flex-shrink:0; }
+.highlight-title { font-family:'Space Grotesk',sans-serif; font-size:0.95rem; font-weight:600; color:var(--text); margin-bottom:4px; }
+.highlight-desc { font-size:0.85rem; color:var(--text-2); line-height:1.6; }
+
+/* ── Pillars ── */
+.pillars-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:40px; }
+.pillar-card { background:var(--bg); border:1px solid var(--border); border-radius:14px; padding:32px 28px; position:relative; overflow:hidden; transition:border-color 0.15s, transform 0.15s; }
+.pillar-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.pillar-number { font-family:'Space Grotesk',sans-serif; font-size:3.5rem; font-weight:800; color:var(--border); line-height:1; margin-bottom:16px; }
+.pillar-title { font-family:'Space Grotesk',sans-serif; font-size:1.2rem; font-weight:700; color:var(--text); margin-bottom:12px; }
+.pillar-desc { font-size:0.875rem; color:var(--text-2); line-height:1.7; margin:0; }
+
+/* ── Ecosystem grid ── */
+.ecosystem-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.eco-card { background:var(--bg-2); border:1px solid var(--border); border-radius:12px; padding:28px 24px; transition:border-color 0.15s, transform 0.15s; }
+.eco-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+.eco-icon { font-size:2rem; margin-bottom:14px; }
+.eco-card h3 { font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:600; color:var(--text); margin-bottom:8px; }
+.eco-card p { font-size:0.875rem; color:var(--text-2); line-height:1.65; margin:0; }
+
+/* ── Steps ── */
+.step-card { display:flex; gap:16px; align-items:flex-start; background:var(--bg); border:1px solid var(--border); border-radius:12px; padding:20px 24px; }
+.step-num { width:32px; height:32px; background:var(--accent); color:#fff; font-family:'Space Grotesk',sans-serif; font-size:0.9rem; font-weight:700; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.step-title { font-family:'Space Grotesk',sans-serif; font-size:0.95rem; font-weight:600; color:var(--text); margin-bottom:4px; }
+.step-desc { font-size:0.85rem; color:var(--text-2); line-height:1.6; }
+
+/* ── CTA Banner ── */
+.cta-banner { padding:80px 0; background:linear-gradient(135deg,#003d28 0%,#001a12 50%,#002a1c 100%); position:relative; overflow:hidden; }
+.cta-banner::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 30% 50%,rgba(0,168,107,0.15) 0%,transparent 60%); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .two-col { grid-template-columns:1fr; gap:40px; }
+  .pillars-grid { grid-template-columns:1fr 1fr; }
+  .ecosystem-grid { grid-template-columns:1fr 1fr; }
+  .stat-item { padding:20px 28px; }
+}
+@media (max-width: 600px) {
+  .pillars-grid, .ecosystem-grid { grid-template-columns:1fr; }
+  .stat-divider { display:none; }
+  .stat-item { align-items:flex-start; padding:16px 0; width:50%; }
+  .stats-inner { justify-content:flex-start; }
+  .section-block { padding:56px 0; }
+  .cta-banner { padding:56px 0; }
+}
+</style>
 
 {{ end }}
